@@ -1,0 +1,137 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Breadcrumbs {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Hero -->
+    <div class="section-header pb-6 bg-primary overflow-hidden text-center border-bottom border-light">
+        <div class="container z-2">
+            <div class="row mb-4 justify-content-center">
+                <div class="col-12 col-md-8 col-lg-7">
+                    <h1 class="display-3 mb-4">Breadcrumbs</h1>
+                    <p class="lead">Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.</p>                           
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-6">
+                    <div class="alert shadow-inset">
+                        <div class="d-flex">
+                            <div class="alert-inner--text">
+                                <span class="icon text-danger icon-xs mr-2 mr-md-1"><span class="fas fa-file-alt"></span></span>
+                                <a target="_blank" href="https://themesberg.com/docs/neumorphism-ui/components/breadcrumbs/">See our Documentation</a> for a detailed technical explanation.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Hero -->
+
+    <!-- Section -->
+    <section class="section bg-primary text-dark section-lg">
+        <div class="container">
+            <!-- Title -->
+            <div class="row">
+                <div class="col">
+                    <h2 class="h5 mb-6">Inset Shadow</h2>
+                </div>
+            </div>
+            <!-- End of title-->
+            <div class="row">
+                <div class="col-12">
+                    <!--Breadcrumb-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-gray">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                    <!--End of Breadcrumb-->
+                    <!--Breadcrumb-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-dark">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                    <!--End of Breadcrumb-->
+                    <!--Breadcrumb-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-success ">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                    <!--End of Breadcrumb-->
+                    <!--Breadcrumb-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-info">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                    <!--End of Breadcrumb-->
+                    <!--Breadcrumb-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-danger">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                    <!--End of Breadcrumb-->
+                </div>
+            </div>
+            <!-- Title -->
+            <div class="row">
+                <div class="col">
+                    <h2 class="h5 mt-6 mb-5">Transparent background</h2>
+                </div>
+            </div>
+            <!-- End of title-->
+            <div class="row">
+                <div class="col-12">
+                    <!--Breadcrumb-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-gray breadcrumb-transparent">
+                            <li class="breadcrumb-item active" aria-current="page">Home</li>
+                        </ol>
+                    </nav>
+                    <!--End of Breadcrumb-->
+                    <!--Breadcrumb-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-gray breadcrumb-transparent">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Library</li>
+                        </ol>
+                    </nav>
+                    <!--End of Breadcrumb-->
+                    <!--Breadcrumb-->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-gray breadcrumb-transparent">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                    <!--End of Breadcrumb-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Section -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
+ 
