@@ -1,5 +1,5 @@
 {
-    "name": "theme-jinja2",
+    "name": "jinja2-adminlte",
     "mastertemplate": "theme-jinja2",
     "version": "1.0.0",
     "description": "Template project - Flask/Jinja2 Theme",
@@ -7,10 +7,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/app-generator/theme-jinja2"
+        "url": "https://github.com/app-generator/jinja2-adminlte"
     },
     "bugs": {
-        "url": "https://github.com/app-generator/theme-jinja2/issues",
+        "url": "https://github.com/app-generator/jinja2-adminlte/issues",
         "email": "support@appseed.us"
     },
     "author": "AppSeed App Generator <support@appseed.us> (https://appseed.us)",

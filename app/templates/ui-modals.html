@@ -2,345 +2,658 @@
 
 {% block title %} UI Modals {% endblock %} 
 
+<!-- Element injected in the BODY element -->
+{% block body_class %} {% endblock body_class %} 
+
 <!-- Specific Page CSS goes HERE  -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/static/assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="/static/assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="/static/assets/plugins/toastr/toastr.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/static/assets/css/adminlte.min.css">
+
+{% endblock stylesheets %}
 
 {% block content %}
 
-    <!-- Hero -->
-    <div class="section-header pb-6 bg-primary overflow-hidden text-center border-bottom border-light">
-    <div class="container z-2">
-        <div class="row mb-4 justify-content-center">
-            <div class="col-12 col-md-8 col-lg-7">
-                <h1 class="display-3 mb-4">Modals</h1>
-                    <p class="lead">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for user notifications or completely custom content.</p>
-            </div>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>
+              Modals & Alerts
+              <small>new</small>
+            </h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Modals & Alerts</li>
+            </ol>
+          </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10 col-lg-6">
-                <div class="alert shadow-inset">
-                    <div class="d-flex">
-                        <div class="alert-inner--text">
-                            <span class="icon text-danger icon-xs mr-2 mr-md-1"><span class="fas fa-file-alt"></span></span>
-                            <a target="_blank" href="https://themesberg.com/docs/neumorphism-ui/components/modals/">See our Documentation</a> for a detailed technical explanation.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <!-- End of Hero -->
+      </div><!-- /.container-fluid -->
+    </section>
 
-    <!-- Section -->
-    <div class="section bg-primary text-dark section-lg">
-        <div class="container">
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <!-- Button Modal -->
-                    <button type="button" class="btn btn-block btn-primary mb-4" data-toggle="modal" data-target="#modal-default">Default</button>
-                    <!-- Modal Content -->
-                    <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h2 class="h6 modal-title mb-0" id="modal-title-default">Terms of Service</h2>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">×</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.</p>
-                                    <p>The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as
-                                        soon as possible of high-risk data breaches that could personally affect them.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-sm btn-primary">I Got It</button>
-                                    <button type="button" class="btn btn-primary text-danger ml-auto" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of Modal Content -->
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-edit"></i>
+                  Modal Examples
+                </h3>
+              </div>
+              <div class="card-body">
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+                  Launch Default Modal
+                </button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-primary">
+                  Launch Primary Modal
+                </button>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal-secondary">
+                  Launch Secondary Modal
+                </button>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">
+                  Launch Info Modal
+                </button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-danger">
+                  Launch Danger Modal
+                </button>
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-warning">
+                  Launch Warning Modal
+                </button>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success">
+                  Launch Success Modal
+                </button>
+                <br />
+                <br />
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-sm">
+                  Launch Small Modal
+                </button>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-lg">
+                  Launch Large Modal
+                </button>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-xl">
+                  Launch Extra Large Modal
+                </button>
+                <br />
+                <br />
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-overlay">
+                  Launch Modal with Overlay
+                </button>
+                <div class="text-muted mt-3">
+                  Instructions for how to use modals are available on the
+                  <a href="https://getbootstrap.com/docs/4.4/components/modal/">Bootstrap documentation</a>
                 </div>
-                <div class="col-md-4">
-                    <!-- Button Modal -->
-                    <button type="button" class="btn btn-block btn-primary mb-4" data-toggle="modal" data-target="#modal-notification">Notification</button>
-                    <!-- Modal Content -->
-                    <div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content bg-primary">
-                                <div class="modal-header">
-                                    <p class="modal-title" id="modal-title-notification">A new experience, personalized for you.</p>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">×</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="py-3 text-center">
-                                        <span class="modal-icon display-1-lg"><span class="far fa-envelope-open"></span></span>
-                                        <h2 class="h4 my-3">Important message!</h2>
-                                        <p>Do you know that you can assign status and relation to a company right in the visit list?.</p>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-sm btn-primary">Go to Inbox</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of Modal Content -->
-                </div>
-                <div class="col-md-4">
-                    <!-- Button Modal -->
-                    <button type="button" class="btn btn-block btn-primary mb-4" data-toggle="modal" data-target="#modal-form">Sign
-                        In</button>
-                    <!-- Modal Content -->
-                    <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body p-0">
-                                    <div class="card bg-primary shadow-soft border-light p-4">
-                                        <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">×</span>
-                                        </button>
-                                        <div class="card-header text-center pb-0">
-                                            <h2 class="h4">Sign in to our platform</h2>
-                                            <span>Login here using your username and password</span>   
-                                        </div>
-                                        <div class="card-body">
-                                            <form action="#" class="mt-4">
-                                                <!-- Form -->
-                                                <div class="form-group">
-                                                    <label for="exampleInputIcon3">Your email</label>
-                                                    <div class="input-group mb-4">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text"><span class="fas fa-envelope"></span></span>
-                                                        </div>
-                                                        <input class="form-control" id="exampleInputIcon3" placeholder="example@company.com" type="text" aria-label="email adress">
-                                                    </div>
-                                                </div>
-                                                <!-- End of Form -->
-                                                <div class="form-group">
-                                                    <!-- Form -->
-                                                    <div class="form-group">
-                                                        <label for="exampleInputPassword6">Password</label>
-                                                        <div class="input-group mb-4">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
-                                                            </div>
-                                                            <input class="form-control" id="exampleInputPassword6" placeholder="Password" type="password" aria-label="Password" required>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End of Form -->
-                                                    <div class="d-block d-sm-flex justify-content-between align-items-center mb-4">
-                                                        <div class="form-check mb-2 mb-sm-0">
-                                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
-                                                            <label class="form-check-label" for="defaultCheck5">
-                                                            Remember me
-                                                            </label>
-                                                        </div>
-                                                        <div><a href="#" class="small text-right">Lost password?</a></div>
-                                                    </div>
-                                                </div>
-                                                <button type="submit" class="btn btn-block btn-primary">Sign in</button>
-                                            </form>
-                                            <div class="mt-3 mb-4 text-center">
-                                                <span class="font-weight-normal">or login with</span>
-                                            </div>
-                                            <div class="btn-wrapper my-4 text-center">
-                                                <button class="btn btn-icon-only btn-pill btn-outline-light text-facebook mr-2" type="button" aria-label="facebook button" title="facebook button">
-                                                    <span aria-hidden="true" class="fab fa-facebook-f"></span>
-                                                </button>
-                                                <button class="btn btn-icon-only btn-pill btn-outline-light text-twitter mr-2" type="button" aria-label="twitter button" title="twitter button">
-                                                    <span aria-hidden="true" class="fab fa-twitter"></span>
-                                                </button>
-                                                <button class="btn btn-icon-only btn-pill btn-outline-light text-facebook" type="button" aria-label="github button" title="github button">
-                                                    <span aria-hidden="true" class="fab fa-github"></span>
-                                                </button>
-                                            </div>
-                                            <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
-                                                <span class="font-weight-normal">
-                                                    Not registered?
-                                                    <a href="#" class="font-weight-bold">Create account</a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of Modal Content -->
-                </div>
-                <div class="col-md-4">
-                    <!-- Button Modal -->
-                    <button type="button" class="btn btn-block btn-primary mb-4" data-toggle="modal" data-target="#modal-form-signup">Sign
-                        Up</button>
-                    <!-- Modal Content -->
-                    <div class="modal fade" id="modal-form-signup" tabindex="-1" role="dialog" aria-labelledby="modal-form-signup" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body p-0">
-                                    <div class="card bg-primary shadow-soft border-light p-4">
-                                        <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">×</span>
-                                        </button>
-                                        <div class="card-header text-center pb-0">
-                                            <h2 class="mb-0 h5">Create Account</h2>                               
-                                        </div>
-                                        <div class="card-body">
-                                            <form action="#">
-                                                <!-- Form -->
-                                                <div class="form-group">
-                                                    <label for="exampleInputIcon4">Your email</label>
-                                                    <div class="input-group mb-4">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text"><span class="fas fa-envelope"></span></span>
-                                                        </div>
-                                                        <input class="form-control" id="exampleInputIcon4" placeholder="example@company.com" type="text" aria-label="email adress">
-                                                    </div>
-                                                </div>
-                                                <!-- End of Form -->
-                                                <div class="form-group">
-                                                    <!-- Form -->
-                                                    <div class="form-group">
-                                                        <label for="exampleInputPassword7">Password</label>
-                                                        <div class="input-group mb-4">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
-                                                            </div>
-                                                            <input class="form-control" id="exampleInputPassword7" placeholder="Password" type="password" aria-label="Password" required>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End of Form -->
-                                                    <!-- Form -->
-                                                    <div class="form-group">
-                                                        <label for="exampleConfirmPassword7">Confirm Password</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
-                                                            </div>
-                                                            <input class="form-control" id="exampleConfirmPassword7" placeholder="Confirm password" type="password" aria-label="Password" required>
-                                                        </div>
-                                                    </div>
-                                                    <!-- End of Form -->
-                                                    <div class="form-check mb-4">
-                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
-                                                        <label class="form-check-label" for="defaultCheck6">
-                                                            I agree to the <a href="#">terms and conditions</a>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <button type="submit" class="btn btn-block btn-primary">Sign in</button>
-                                            </form>
-                                            <div class="mt-3 mb-4 text-center">
-                                                <span class="font-weight-normal">or</span>
-                                            </div>
-                                            <div class="btn-wrapper my-4 text-center">
-                                                <button class="btn btn-icon-only btn-pill btn-outline-light text-facebook mr-2" type="button" aria-label="facebook button" title="facebook button">
-                                                    <span aria-hidden="true" class="fab fa-facebook-f"></span>
-                                                </button>
-                                                <button class="btn btn-icon-only btn-pill btn-outline-light text-twitter mr-2" type="button" aria-label="twitter button" title="twitter button">
-                                                    <span aria-hidden="true" class="fab fa-twitter"></span>
-                                                </button>
-                                                <button class="btn btn-icon-only btn-pill btn-outline-light text-facebook" type="button" aria-label="github button" title="github button">
-                                                    <span aria-hidden="true" class="fab fa-github"></span>
-                                                </button>
-                                            </div>
-                                            <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
-                                                <span class="font-weight-normal">
-                                                    Already have an account?
-                                                    <a href="#" class="font-weight-bold">Login here</a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of Modal Content -->
-                </div>
-                <div class="col-md-4">
-                    <!-- Button Modal -->
-                    <button type="button" class="btn btn-block btn-primary mb-4" data-toggle="modal" data-target="#modal-achievement">Achievement</button>
-                    <!-- Modal Content -->
-                    <div class="modal fade" id="modal-achievement" tabindex="-1" role="dialog" aria-labelledby="modal-achievement" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content shadow-soft">
-                                <div class="modal-header mx-auto">
-                                    <span class="lead mb-0">You just unlocked a new badge</span>
-                                    <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">×</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="py-3 text-center">
-                                        <span class="modal-icon icon icon-dark display-1-lg"><span class="fas fa-medal"></span></span>
-                                        <h2 class="h4 modal-title my-2">Author Level 5</h2>
-                                        <p>One Thousand Dollars! Well done - heads are turning your way.</p>
-                                        <div class="progress-wrapper">
-                                            <div class="progress">
-                                                <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-sm btn-primary">All badges</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of Modal Content -->
-                </div>
-                <div class="col-md-4">
-                    <!-- Button Modal -->
-                    <button type="button" class="btn btn-block btn-primary mb-4" data-toggle="modal" data-target="#modal-subscribe">Subscribe</button>
-                    <!-- Modal Content -->
-                    <div class="modal fade" id="modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="modal-subscribe" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                            <div class="modal-content shadow-soft">
-                                <div class="modal-header">
-                                    <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">×</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body px-6">
-                                    <div class="py-3">
-                                        <div class="text-center">
-                                            <span class="modal-icon icon icon-lg display-1-lg"><span class="fas fa-envelope-open-text"></span></span>
-                                            <h2 class="h4 modal-title my-2">Join our 1,360,462 subscribers</h2>
-                                            <p class="mb-4">Get exclusive access to freebies, premium products and news.</p>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail6">Email address</label>
-                                            <div class="d-sm-flex flex-column flex-sm-row mb-3 justify-content-center">
-                                                <input type="text" id="exampleInputEmail6" placeholder="Enter your email adress here" class="mr-sm-1 mb-2 mb-sm-0 form-control form-control-lg">
-                                                <button type="submit" class="ml-sm-1 btn btn-primary">Subscribe</button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer z-2 mx-auto text-center">
-                                    <p class="text-gray">
-                                        We’ll never share your details with third parties.
-                                        <br class="visible-md">View our <a href="#">Privacy Policy</a> for more info.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End of Modal Content -->
-                </div>
+              </div>
+              <!-- /.card -->
             </div>
+
+            <div class="card card-info card-outline">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-edit"></i>
+                  Toasts Examples <small>built in AdminLTE</small>
+                </h3>
+              </div>
+              <div class="card-body">
+                <button type="button" class="btn btn-default toastsDefaultDefault">
+                  Launch Default Toast
+                </button>
+                <button type="button" class="btn btn-default toastsDefaultFull">
+                  Launch Full Toast (with icon)
+                </button>
+                <button type="button" class="btn btn-default toastsDefaultFullImage">
+                  Launch Full Toast (with image)
+                </button>
+                <button type="button" class="btn btn-default toastsDefaultAutohide">
+                  Launch Default Toasts with autohide
+                </button>
+                <button type="button" class="btn btn-default toastsDefaultNotFixed">
+                  Launch Default Toasts with not fixed
+                </button>
+                <br />
+                <br />
+                <button type="button" class="btn btn-default toastsDefaultTopLeft">
+                  Launch Default Toast (topLeft)
+                </button>
+                <button type="button" class="btn btn-default toastsDefaultBottomRight">
+                  Launch Default Toast (bottomRight)
+                </button>
+                <button type="button" class="btn btn-default toastsDefaultBottomLeft">
+                  Launch Default Toast (bottomLeft)
+                </button>
+                <br />
+                <br />
+                <button type="button" class="btn btn-success toastsDefaultSuccess">
+                  Launch Success Toast
+                </button>
+                <button type="button" class="btn btn-info toastsDefaultInfo">
+                  Launch Info Toast
+                </button>
+                <button type="button" class="btn btn-warning toastsDefaultWarning">
+                  Launch Warning Toast
+                </button>
+                <button type="button" class="btn btn-danger toastsDefaultDanger">
+                  Launch Danger Toast
+                </button>
+                <button type="button" class="btn btn-default bg-maroon toastsDefaultMaroon">
+                  Launch Maroon Toast
+                </button>
+                <div class="text-muted mt-3">
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-success card-outline">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-edit"></i>
+                  SweetAlert2 Examples
+                </h3>
+              </div>
+              <div class="card-body">
+                <button type="button" class="btn btn-success swalDefaultSuccess">
+                  Launch Success Toast
+                </button>
+                <button type="button" class="btn btn-info swalDefaultInfo">
+                  Launch Info Toast
+                </button>
+                <button type="button" class="btn btn-danger swalDefaultError">
+                  Launch Error Toast
+                </button>
+                <button type="button" class="btn btn-warning swalDefaultWarning">
+                  Launch Warning Toast
+                </button>
+                <button type="button" class="btn btn-default swalDefaultQuestion">
+                  Launch Question Toast
+                </button>
+                <div class="text-muted mt-3">
+                  For more examples look at <a href="https://sweetalert2.github.io/">https://sweetalert2.github.io/</a>
+                </div>
+              </div>
+              <!-- /.card -->
+            </div>
+
+            <div class="card card-warning card-outline">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-edit"></i>
+                  Toastr Examples
+                </h3>
+              </div>
+              <div class="card-body">
+                <button type="button" class="btn btn-success toastrDefaultSuccess">
+                  Launch Success Toast
+                </button>
+                <button type="button" class="btn btn-info toastrDefaultInfo">
+                  Launch Info Toast
+                </button>
+                <button type="button" class="btn btn-danger toastrDefaultError">
+                  Launch Error Toast
+                </button>
+                <button type="button" class="btn btn-warning toastrDefaultWarning">
+                  Launch Warning Toast
+                </button>
+                <div class="text-muted mt-3">
+                  For more examples look at <a href="https://codeseven.github.io/toastr/">https://codeseven.github.io/toastr/</a>
+                </div>
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+          <!-- /.col -->
         </div>
-    </div>
-    <!-- End of Section -->
+        <!-- ./row -->
+      </div><!-- /.container-fluid -->
+
+      <div class="modal fade" id="modal-default">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Default Modal</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <div class="modal fade" id="modal-overlay">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="overlay d-flex justify-content-center align-items-center">
+                <i class="fas fa-2x fa-sync fa-spin"></i>
+            </div>
+            <div class="modal-header">
+              <h4 class="modal-title">Default Modal</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <div class="modal fade" id="modal-primary">
+        <div class="modal-dialog">
+          <div class="modal-content bg-primary">
+            <div class="modal-header">
+              <h4 class="modal-title">Primary Modal</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-outline-light">Save changes</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <div class="modal fade" id="modal-secondary">
+        <div class="modal-dialog">
+          <div class="modal-content bg-secondary">
+            <div class="modal-header">
+              <h4 class="modal-title">Secondary Modal</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-outline-light">Save changes</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <div class="modal fade" id="modal-info">
+        <div class="modal-dialog">
+          <div class="modal-content bg-info">
+            <div class="modal-header">
+              <h4 class="modal-title">Info Modal</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-outline-light">Save changes</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <div class="modal fade" id="modal-warning">
+        <div class="modal-dialog">
+          <div class="modal-content bg-warning">
+            <div class="modal-header">
+              <h4 class="modal-title">Warning Modal</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-outline-dark">Save changes</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <div class="modal fade" id="modal-success">
+        <div class="modal-dialog">
+          <div class="modal-content bg-success">
+            <div class="modal-header">
+              <h4 class="modal-title">Success Modal</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-outline-light">Save changes</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <div class="modal fade" id="modal-danger">
+        <div class="modal-dialog">
+          <div class="modal-content bg-danger">
+            <div class="modal-header">
+              <h4 class="modal-title">Danger Modal</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-outline-light">Save changes</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <div class="modal fade" id="modal-sm">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Small Modal</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <div class="modal fade" id="modal-lg">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Large Modal</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <div class="modal fade" id="modal-xl">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Extra Large Modal</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+    </section>
+    <!-- /.content -->
+  </div>
 
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %}
+
+  <!-- jQuery -->
+  <script src="/static/assets/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="/static/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- SweetAlert2 -->
+  <script src="/static/assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+  <!-- Toastr -->
+  <script src="/static/assets/plugins/toastr/toastr.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="/static/assets/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="/static/assets/js/demo.js"></script>
+
+  <script>
+    $(function() {
+      var Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000
+      });
+
+      $('.swalDefaultSuccess').click(function() {
+        Toast.fire({
+          icon: 'success',
+          title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.swalDefaultInfo').click(function() {
+        Toast.fire({
+          icon: 'info',
+          title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.swalDefaultError').click(function() {
+        Toast.fire({
+          icon: 'error',
+          title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.swalDefaultWarning').click(function() {
+        Toast.fire({
+          icon: 'warning',
+          title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.swalDefaultQuestion').click(function() {
+        Toast.fire({
+          icon: 'question',
+          title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+
+      $('.toastrDefaultSuccess').click(function() {
+        toastr.success('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+      });
+      $('.toastrDefaultInfo').click(function() {
+        toastr.info('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+      });
+      $('.toastrDefaultError').click(function() {
+        toastr.error('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+      });
+      $('.toastrDefaultWarning').click(function() {
+        toastr.warning('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+      });
+
+      $('.toastsDefaultDefault').click(function() {
+        $(document).Toasts('create', {
+          title: 'Toast Title',
+          body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.toastsDefaultTopLeft').click(function() {
+        $(document).Toasts('create', {
+          title: 'Toast Title',
+          position: 'topLeft',
+          body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.toastsDefaultBottomRight').click(function() {
+        $(document).Toasts('create', {
+          title: 'Toast Title',
+          position: 'bottomRight',
+          body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.toastsDefaultBottomLeft').click(function() {
+        $(document).Toasts('create', {
+          title: 'Toast Title',
+          position: 'bottomLeft',
+          body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.toastsDefaultAutohide').click(function() {
+        $(document).Toasts('create', {
+          title: 'Toast Title',
+          autohide: true,
+          delay: 750,
+          body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.toastsDefaultNotFixed').click(function() {
+        $(document).Toasts('create', {
+          title: 'Toast Title',
+          fixed: false,
+          body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.toastsDefaultFull').click(function() {
+        $(document).Toasts('create', {
+          body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
+          title: 'Toast Title',
+          subtitle: 'Subtitle',
+          icon: 'fas fa-envelope fa-lg',
+        })
+      });
+      $('.toastsDefaultFullImage').click(function() {
+        $(document).Toasts('create', {
+          body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
+          title: 'Toast Title',
+          subtitle: 'Subtitle',
+          image: '../../dist/img/user3-128x128.jpg',
+          imageAlt: 'User Picture',
+        })
+      });
+      $('.toastsDefaultSuccess').click(function() {
+        $(document).Toasts('create', {
+          class: 'bg-success',
+          title: 'Toast Title',
+          subtitle: 'Subtitle',
+          body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.toastsDefaultInfo').click(function() {
+        $(document).Toasts('create', {
+          class: 'bg-info',
+          title: 'Toast Title',
+          subtitle: 'Subtitle',
+          body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.toastsDefaultWarning').click(function() {
+        $(document).Toasts('create', {
+          class: 'bg-warning',
+          title: 'Toast Title',
+          subtitle: 'Subtitle',
+          body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.toastsDefaultDanger').click(function() {
+        $(document).Toasts('create', {
+          class: 'bg-danger',
+          title: 'Toast Title',
+          subtitle: 'Subtitle',
+          body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+      $('.toastsDefaultMaroon').click(function() {
+        $(document).Toasts('create', {
+          class: 'bg-maroon',
+          title: 'Toast Title',
+          subtitle: 'Subtitle',
+          body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+        })
+      });
+    });
+
+  </script>
+
+{% endblock javascripts %}
