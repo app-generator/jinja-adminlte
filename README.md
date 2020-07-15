@@ -2,7 +2,7 @@
 
 > Template Theme provided by [AppSeed](https://appseed.us) - Features:
 
-- UI Kit: **Neumorphism UI** (Free Version) by **Themesberg**
+- UI Kit: **AdminLTE** by **ColorLib**
 - Render Engine: Flask / [Jinja2](https://jinja.palletsprojects.com/)
 - **[MIT License](https://github.com/app-generator/license-mit)**
 - Free support via **Github** issues tracker
