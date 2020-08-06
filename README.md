@@ -1,4 +1,4 @@
-# [Jinja2 Template - AdminLTE](https://jinja2-adminlte.appseed.us/)
+# [Jinja Template - AdminLTE](https://jinja2-adminlte.appseed.us/)
 
 > Template Theme provided by [AppSeed](https://appseed.us) - Features:
 
@@ -25,7 +25,7 @@
 
 <br />
 
-![Jinja2 AdminLTE - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/jinja2-adminlte/master/media/jinja2-adminlte-screen.png)
+![Jinja Template - AdminLTE.](https://raw.githubusercontent.com/app-generator/jinja2-adminlte/master/media/jinja2-adminlte-screen.png)
 
 <br />
 
@@ -186,4 +186,4 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 <br />
 
 ---
-[Jinja2 Template - AdminLTE](https://jinja2-adminlte.appseed.us/) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Jinja Template - AdminLTE](https://jinja2-adminlte.appseed.us/) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
