@@ -1,8 +1,8 @@
-# [Jinja Template - AdminLTE](https://jinja2-adminlte.appseed.us/)
+# [Jinja Template](https://github.com/app-generator/jinja-template) - [AdminLTE](https://appseed.us/adminlte)
 
 > Template Theme provided by [AppSeed](https://appseed.us) - Features:
 
-- UI Kit: **AdminLTE** by **ColorLib**
+- UI Kit: **[AdminLTE](https://appseed.us/adminlte)** by **ColorLib**
 - Render Engine: Flask / [Jinja2](https://jinja.palletsprojects.com/)
 - **[MIT License](https://github.com/app-generator/license-mit)**
 - Free support via **Github** issues tracker
@@ -15,14 +15,9 @@
 
 <br />
 
-## UI Kit - [AdminLTE](https://adminlte.io/)
+## UI Kit - [AdminLTE](https://appseed.us/adminlte)
 
-*Vendor Notes* - AdminLTE is a fully responsive administration template. Based on Bootstrap 4.4 framework and also the JS/jQuery plugin. Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops
-
-> Links
-
-- [AdminLTE](https://adminlte.io/) - the official website
-- [AdminLTE Demo](https://adminlte.io/themes/AdminLTE/index2.html)
+*Vendor Notes* - [AdminLTE](https://appseed.us/adminlte) is a fully responsive administration template. Based on Bootstrap 4.4 framework and also the JS/jQuery plugin. Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops
 
 <br />
 
