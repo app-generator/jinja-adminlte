@@ -182,4 +182,4 @@ Visit `http://localhost:8001` in your browser. The app should be up & running.
 <br />
 
 ---
-[Jinja Template - AdminLTE](https://jinja2-adminlte.appseed.us/) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[Jinja Template](https://github.com/app-generator/jinja-template) [AdminLTE](https://appseed.us/adminlte) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
