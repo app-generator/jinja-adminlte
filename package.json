@@ -1,24 +1,21 @@
 {
-    "name": "jinja2-adminlte",
-    "mastertemplate": "theme-jinja2",
-    "version": "1.0.0",
+    "name": "jinja-adminlte",
+    "mastertemplate": "boilerplate-code-jinja",
+    "version": "1.0.1",
     "description": "Template project - Flask/Jinja2 Theme",
-    "scripts": {
-    },
+    "scripts": {},
     "repository": {
         "type": "git",
-        "url": "https://github.com/app-generator/jinja2-adminlte"
+        "url": "https://github.com/app-generator/jinja-adminlte"
     },
     "bugs": {
-        "url": "https://github.com/app-generator/jinja2-adminlte/issues",
+        "url": "https://github.com/app-generator/jinja-adminlte/issues",
         "email": "support@appseed.us"
     },
     "author": "AppSeed App Generator <support@appseed.us> (https://appseed.us)",
     "engines": {
         "node": ">=10.0.0"
     },
-    "dependencies": {
-    },
-    "devDependencies": {
-    }
+    "dependencies": {},
+    "devDependencies": {}
 }
