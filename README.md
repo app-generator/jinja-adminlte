@@ -7,6 +7,8 @@
 - Deployment scripts: Docker, Gunicorn/Nginx, HEROKU
 - Support via **Github** (issues tracker) and [Discord](https://discord.gg/fZC6hup).
 
+<br />
+
 > Links
 
 - [Jinja AdminLTE](https://adminlte-jinja.appseed-srv1.com/) - starter in action
