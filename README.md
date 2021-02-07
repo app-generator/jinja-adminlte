@@ -9,7 +9,7 @@
 
 > Links
 
-- [Jinja Azia Dashboard](https://adminlte-jinja.appseed-srv1.com/) - starter in action
+- [Jinja AdminLTE](https://adminlte-jinja.appseed-srv1.com/) - starter in action
 - More [Jinja Templates](https://appseed.us/jinja-template) provided by AppSeed
 
 <br />
