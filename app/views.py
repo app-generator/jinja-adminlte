@@ -4,7 +4,7 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 # Flask modules
-from flask   import render_template
+from flask   import render_template, request
 from jinja2  import TemplateNotFound
 
 # App modules
@@ -17,8 +17,25 @@ def index(path):
 
     try:
 
+        # Detect the current page
+        segment = get_segment( request )
+
         # Serve the file (if exists) from app/templates/FILE.html
-        return render_template( path )
+        return render_template( path, segment=segment )
     
     except TemplateNotFound:
         return render_template('page-404.html'), 404
+
+def get_segment( request ): 
+
+    try:
+
+        segment = request.path.split('/')[-1]
+
+        if segment == '':
+            segment = 'index.html'
+
+        return segment    
+
+    except:
+        return None  
