@@ -20,7 +20,7 @@ AdminLTE is a fully responsive administration template. Based on Bootstrap 4.4 f
 
 <br />
 
-![Jinja Template - AdminLTE.](https://raw.githubusercontent.com/app-generator/adminlte-jinja/master/media/jinja2-adminlte-screen.png)
+![Jinja Template - AdminLTE.](https://raw.githubusercontent.com/app-generator/jinja-adminlte/master/media/jinja2-adminlte-screen.png)
 
 <br />
 
