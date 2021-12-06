@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.0.2] 2021-12-06
+
+- Bump Codebase: [Jinja Template](https://github.com/app-generator/boilerplate-code-jinja/releases) v2.0.0
+
 ## [1.0.1] 2021-02-07
 
 - Bump Codebase: [Jinja Template](https://github.com/app-generator/boilerplate-code-jinja/releases) v1.0.3
